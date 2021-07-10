@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Validator;
+
 use App\Http\Resources\EmpresaResource;
 
 class EmpresaController extends Controller
 {
-    public function show(Request $request){
+    public function show(int $cnpj){
 
-        $validated = $request->validate([
-            'cnpj' => 'required|int|digits:14',
-        ]);
+        Validator::make([ 'cnpj' => $cnpj ], [
+            'cnpj' => 'required|int|digits:14'
+        ])->validate();
 
-        $endpoint = "https://brasilapi.com.br/api/cnpj/v1/{$request->cnpj}";
+        $endpoint = "https://brasilapi.com.br/api/cnpj/v1/{$cnpj}";
 
         $response = json_decode(Http::get($endpoint)->body());
 

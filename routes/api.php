@@ -19,6 +19,6 @@ use App\Http\Controllers\EmpresaController;
 
 Route::group(['middleware' => ['json.response']], function () { 
 
-    Route::get('/search', [EmpresaController::class, 'show']);
+    Route::get('/search/{cnpj}', [EmpresaController::class, 'show']);
 
 });
