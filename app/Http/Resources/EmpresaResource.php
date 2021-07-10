@@ -20,7 +20,7 @@ class EmpresaResource extends JsonResource
             'descricao' => $this->cnae_fiscal_descricao,
             'data_abertura' => $this->data_inicio_atividade,
             'data_ultima_atualizacao' => $this->data_situacao_cadastral,
-            'endereço' => [
+            'endereco' => [
                 'descricao_logradouro' => $this->descricao_tipo_logradouro,
                 'logradouro' => $this->logradouro,
                 'numero ' => $this->numero,
