@@ -9,7 +9,7 @@ use App\Http\Resources\EmpresaResource;
 
 class EmpresaController extends Controller
 {
-    public function show(int $cnpj){
+    public function show($cnpj){
 
         Validator::make([ 'cnpj' => $cnpj ], [
             'cnpj' => 'required|int|digits:14'
