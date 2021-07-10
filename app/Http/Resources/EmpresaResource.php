@@ -23,7 +23,7 @@ class EmpresaResource extends JsonResource
             'endereco' => [
                 'descricao_logradouro' => $this->descricao_tipo_logradouro,
                 'logradouro' => $this->logradouro,
-                'numero ' => $this->numero,
+                'numero' => $this->numero,
                 'complemento' => $this->complemento,
                 'bairro' => $this->bairro,
                 'cep' => $this->cep,
