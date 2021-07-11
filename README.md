@@ -1,4 +1,7 @@
+
+
 ```
+Renomear .env.example para .env
 composer install
 npm install
 ```
